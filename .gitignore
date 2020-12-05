@@ -2,4 +2,4 @@ results
 data
 src/.idea
 *.DS_store
-
+**__pycache__
