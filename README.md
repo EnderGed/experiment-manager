@@ -15,7 +15,6 @@ How to use:
 General project setup:
 1. git clone git@github.com:EnderGed/experiment-manager.git
 1. cd experiment-manager
-   # pyenv is for both mac and linux for managing multiple python versions
 1. pyenv install 3.7.5 # of course any version of python will work
 1. Create a virtualenv:
 * pip3 install virtualenv
