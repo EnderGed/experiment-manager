@@ -62,6 +62,10 @@ def test_bar(name, num, value):
     logging.debug("This won't, because pytest-html only captures warning and above")
 
 
+@pytest.mark.parametrize('arg1,arg2', [('foo', 1), ('bar', 2)])
 @pytest.mark.experiments1
-def test_bar2():
-    pass
+def test_on_gpus(arg1, arg2, gpu):
+    cuda = 'cuda:{}'.format(gpu)
+    # device = torch.device(cuda) # if you use pytorch
+    # prints are also captured by the html reports
+    print('Runnin {}_{} on gpu:{}.'.format(arg1, arg2, gpu))
