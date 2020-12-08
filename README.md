@@ -7,7 +7,7 @@ To get a specific order of execution of batches of experiments we just run pytes
 There is also a fixture to assign a gpu number to each worker, you just need to make sure that the number of workers is smaller or equal that number of gpus specified (as a command argument of *src/main.sh*).
 
 How to use:
-1. Put all your experiments in *src/research_tests*
+1. Put all your experiments in *src/research_tests*, each experiment function needs to start with 'test_'
 1. Define your markers in *src/research_tests/pytest.ini*
 1. Modify *src/main.sh* with your markers an number of workers for each batch.
 1. Use *src/main.sh* to execute your experiments.
